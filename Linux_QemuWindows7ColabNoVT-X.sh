@@ -1,6 +1,7 @@
 wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip > /dev/null 2>&1
 unzip ngrok-stable-linux-amd64.zip > /dev/null 2>&1
-./ngrok authtoken 25AhXgj8puqr5ocKY5qZdsNC1AF_6BU977FNhdG6D7He796ds 
+read -p "Paste authtoken here (Copy and Ctrl+V to paste then press Enter): " 25AhXgj8puqr5ocKY5qZdsNC1AF_6BU977FNhdG6D7He796ds
+./ngrok authtoken $CRP
 nohup ./ngrok tcp 5900 &>/dev/null &
 echo Please wait for installing...
 sudo apt update -y > /dev/null 2>&1
